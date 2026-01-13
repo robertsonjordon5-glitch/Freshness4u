@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshness4U | The Freshness Standard™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['"Montserrat"', 'sans-serif'] },
+            colors: { primary: '#2c3e50', accent: '#d4af37', bgLight: '#fcfbf7' }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #2c3e50; background-color: #fcfbf7; line-height: 1.5; overflow-x: hidden; }
+      h1, h2, h3, h4 { font-family: 'Playfair Display', serif; margin: 0; line-height: 1.25; }
+      button { cursor: pointer; }
+    </style>
+</head>
+<body>
+  <div class="relative h-[600px] text-white text-center overflow-hidden font-sans">
+    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <div class="relative z-20 h-full flex flex-col justify-center items-center px-6">
+      <div class="absolute top-8 left-0 right-0 px-8 md:px-16 flex justify-between items-center w-full max-w-7xl mx-auto box-border">
+        <h3 class="text-white text-2xl font-bold tracking-widest font-serif m-0">Freshness4U</h3>
+        <div class="hidden md:flex font-sans text-xs tracking-[0.2em] space-x-8">
+          <button onclick="scrollToShop()" class="text-white hover:text-accent transition-colors bg-transparent border-0 cursor-pointer uppercase font-sans tracking-[0.2em]">Shop</button>
+        </div>
+      </div>
+      <p class="font-sans text-xs md:text-sm tracking-[0.3em] mb-4 uppercase text-[#fcfbf7] mt-12 md:mt-0">Worldwide • Global • International</p>
+      <h1 class="font-serif text-5xl md:text-7xl leading-tight mb-6 drop-shadow-xl text-white">The Freshness Standard™<br /><span class="italic">Digital Blueprint</span></h1>
+      <p class="font-sans text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto opacity-90 text-white">The secret weapon for 5-star Luxury Villa reviews worldwide.</p>
+      <button onclick="scrollToShop()" class="bg-accent hover:bg-white hover:text-accent text-white py-4 px-10 rounded-full text-base font-bold tracking-widest transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 cursor-pointer border-0 font-sans mx-auto">GET YOUR BLUEPRINT</button>
+    </div>
+  </div>
+
+  <div class="relative z-30 max-w-6xl mx-auto -mt-24 px-4 sm:px-6 mb-24 font-sans">
+    <div class="bg-white rounded-lg shadow-2xl flex flex-wrap overflow-hidden border-b-4 border-accent box-border">
+      <div class="w-full lg:w-1/2 relative min-h-[400px]">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80" alt="Luxury Villa Interior" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/10"></div>
+      </div>
+      <div class="w-full lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center text-left">
+        <div class="mb-8">
+          <p class="font-sans text-accent font-bold tracking-widest text-xs mb-3">LIMITED TIME OFFER ENDS IN:</p>
+          <div id="countdown-timer" class="flex gap-3">
+            <div class="bg-accent text-white p-2 rounded-md text-center min-w-[70px]"><span id="timer-hours" class="block text-2xl font-bold leading-none">47</span><span class="text-[10px] uppercase">HOURS</span></div>
+            <div class="bg-accent text-white p-2 rounded-md text-center min-w-[70px]"><span id="timer-minutes" class="block text-2xl font-bold leading-none">59</span><span class="text-[10px] uppercase">MINUTES</span></div>
+            <div class="bg-accent text-white p-2 rounded-md text-center min-w-[70px]"><span id="timer-seconds" class="block text-2xl font-bold leading-none">59</span><span class="text-[10px] uppercase">SECONDS</span></div>
+          </div>
+        </div>
+        <h2 class="font-serif text-3xl md:text-4xl text-primary mb-4 leading-tight">Instantly Elevate Your Reviews</h2>
+        <p class="font-sans text-gray-600 leading-relaxed mb-8">Get the exact <span class="font-bold text-primary">5-Star Freshness Checklist</span> used by the world's top luxury estates.</p>
+        <div id="email-form-container" class="flex flex-col gap-4">
+          <div class="relative w-full">
+            <input type="email" id="lead-email" placeholder="Enter your email address..." class="w-full pl-4 pr-4 py-4 border-2 border-gray-100 rounded-lg text-base outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-gray-800 bg-white box-border m-0" style="min-height: 56px;" />
+          </div>
+          <button onclick="handleLeadSubmit()" class="w-full bg-primary hover:bg-[#1a252f] text-white py-4 px-6 rounded-lg text-lg font-bold tracking-widest transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer border-0 font-sans">GET THE FREE CHECKLIST</button>
+        </div>
+        <div id="email-success-msg" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 font-sans"><span class="font-bold">Success!</span> The checklist is opening in a new tab.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shop-section" class="max-w-7xl mx-auto px-6 py-24 font-sans">
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-4xl md:text-5xl text-primary mb-4">The International Scent Portfolio</h2>
+      <p class="font-sans text-gray-400 italic text-lg">Curated Scents for Elite Destinations Worldwide</p>
+      <div class="w-24 h-1 bg-accent mx-auto mt-8"></div>
+    </div>
+    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"></div>
+  </div>
+
+  <footer class="bg-primary text-white py-12 px-6 font-sans">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-left"><h4 class="font-serif text-2xl font-bold tracking-wider mb-2 text-white">Freshness4U</h4><p class="font-sans text-xs text-gray-400 tracking-widest uppercase m-0">The Gold Standard in Villa Hospitality</p></div>
+      <div class="text-sm text-gray-400 font-sans">&copy; <span id="year">2026</span> Freshness4U. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const PAYPAL_EMAIL = 'Robertsonjordon5@gmail.com';
+      const FREE_CHECKLIST_LINK = 'https://drive.google.com/file/d/1hVKZ8tZA1XQMlac-qO6jM3YHWKTLvGyq/view?usp=drive_link';
+      const PRODUCTS = [
+        { id: 'oceanfront', name: 'The Oceanfront Oasis', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1G-Vm_fgUxpK7Lv3Wgkwa0_2PQwA_KGcH/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80' },
+        { id: 'royal', name: 'The Royal Estate', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1fFwnaMZcC9dgNdtZG93FUDeEXUMX-QY2/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80' },
+        { id: 'jungle', name: 'The Jungle Zen', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1Ifaa5vYcMS2CMmtYulTgY6dvTnP0kSpK/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80' },
+        { id: 'honeymoon', name: 'The Honeymoon Suite', price: '100.00', downloadLink: 'https://drive.google.com/file/d/18oNYzxyxGbftPt-LW6eMj_tK3hw1EWjd/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80' },
+        { id: 'executive', name: 'The Executive Hub', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1_Wz6G76ydWsOyBkv9-Zl3MqqK_d8qw7p/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80' },
+        { id: 'spa', name: 'The Spa Sanctuary', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1Tir19b7v1y2cxQSHLONbVA45GTzWDOp9/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+        { id: 'sunset', name: 'The Sunset Penthouse', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1jKDzoNB5MG1arW3nO_1-m2RC9FnpEgoQ/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80' },
+        { id: 'heritage', name: 'The Heritage Hideaway', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1hE8SW8G_9cAzwqF3o_XsHzNe6LXGLs-n/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80' },
+        { id: 'family', name: 'The Family Fresh', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1bbdZCicqDK4_cVPIHse1Q8OBCEdyXp9j/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80' },
+        { id: 'master', name: 'The Master Standard', price: '100.00', downloadLink: 'https://drive.google.com/file/d/1RTGKz9gdQWTOYBx0oNM0iXNRm-hqG6Tj/view?usp=drive_link', imageUrl: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80' }
+      ];
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initCountdown();
+        renderProducts();
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+      window.scrollToShop = function() { const shop = document.getElementById('shop-section'); if (shop) shop.scrollIntoView({ behavior: 'smooth' }); };
+
+      window.handleLeadSubmit = function() {
+        const input = document.getElementById('lead-email');
+        if (input.value.length > 5 && input.value.includes("@")) {
+          window.open(FREE_CHECKLIST_LINK, '_blank');
+          document.getElementById('email-form-container').classList.add('hidden');
+          document.getElementById('email-success-msg').classList.remove('hidden');
+          input.value = '';
+        } else { alert("Please enter a valid email address first."); }
+      };
+
+      window.handleBuyNow = function(price, name) {
+        if (!PAYPAL_EMAIL.includes("@")) { alert("Admin Note: Check PayPal email."); return; }
+        window.open(`https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${PAYPAL_EMAIL}&currency_code=USD&amount=${price}&item_name=${encodeURIComponent(name)}`, '_blank');
+      };
+
+      window.handleDownload = function(e, link, name) {
+        e.preventDefault();
+        if (confirm(`To access ${name}, ensure your payment is complete. Click OK to download.`)) { window.open(link, '_blank'); }
+      };
+
+      function initCountdown() {
+        const countDownDate = new Date().getTime() + (48 * 60 * 60 * 1000);
+        setInterval(() => {
+          const now = new Date().getTime(), distance = countDownDate - now;
+          if (distance < 0) return;
+          const h = Math.floor((distance % (86400000)) / 3600000), m = Math.floor((distance % 3600000) / 60000), s = Math.floor((distance % 60000) / 1000);
+          const hEl = document.getElementById('timer-hours'); if(hEl) hEl.innerText = h;
+          const mEl = document.getElementById('timer-minutes'); if(mEl) mEl.innerText = m;
+          const sEl = document.getElementById('timer-seconds'); if(sEl) sEl.innerText = s;
+        }, 1000);
+      }
+
+      function renderProducts() {
+        const grid = document.getElementById('products-grid');
+        if (!grid) return;
+        let html = '';
+        PRODUCTS.forEach(p => {
+          html += `<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col h-full border border-gray-100 box-border"><div class="relative overflow-hidden rounded-lg mb-4 group h-48 w-full"><img src="${p.imageUrl}" alt="${p.name}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"/><div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div></div><h3 class="text-accent text-xl font-serif font-bold mb-2 mt-0">${p.name}</h3><p class="text-primary font-bold text-2xl mb-6 mt-0">$${p.price} <span class="text-sm font-normal text-gray-500">USD</span></p><div class="mt-auto space-y-3"><button onclick="handleBuyNow('${p.price}', '${p.name}')" class="w-full bg-accent hover:bg-[#c49f27] text-white py-3 px-4 rounded-lg font-bold tracking-wider transition-colors duration-200 flex items-center justify-center gap-2 group cursor-pointer border-0 font-sans">BUY NOW</button><a href="#" onclick="handleDownload(event, '${p.downloadLink}', '${p.name}')" class="block text-gray-400 text-xs hover:text-accent underline transition-colors font-sans">I already paid (Download PDF)</a></div></div>`;
+        });
+        grid.innerHTML = html;
+      }
+    })();
+  </script>
+</body>
+</html>
